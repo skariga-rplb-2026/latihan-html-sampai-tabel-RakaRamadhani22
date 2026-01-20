@@ -1,0 +1,41 @@
+body{
+    background-color: #1bffff;
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input{
+    background-color: #4bcf61;
+}
+.btn{
+    text-transform: uppercase;
+    padding: 5px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    animation-duration: 4s;
+}
+@keyframes gradasi{
+    form{
+        background-color: red;
+    }
+    to{
+        background-color: yellow;
+    }
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: 800;
+}>
+.kirim{
+    background-color: green;
+    color: white;
+}
+.reset{
+    background-color: red;
+    color: rgb(0, 0, 0);
+}
+.kirim{
+    background-color: skyblue;
+    color: black;
+}

@@ -1,9 +1,10 @@
 <html>
     <head>
         <title>Latihan Form</title>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <h3>Latihan Form</h3>
+    <body
+        <h3 style="color: blue;">Latihan Form</h3>
        <table>
         <form action="#" method="POST">
             <tr>
@@ -37,6 +38,10 @@
             <tr>
                 <td>Bulan :</td>
                 <td><input type="month" month="Bulan" size="50"><br></td>
+            </tr>
+            <tr>
+                <td>Username :</td>
+                <td><input type="username" username="username"></td>
             </tr>
             <tr>
                 <td>Password :</td>
@@ -87,9 +92,9 @@
                 <td></select></td>
                 <td> Alamat Lengkap : <br>
                 <textarea name="alamat" cols="30" rows="10"></textarea><br>
-                <input type="button" value="KLIK ME!">
-                <input type="submit" value="KIRIM">
-                <input type="reset" value="RESET"></td>
+                <input type="button" value="KLIK ME!" class="btn klik" onclick="alert('ridwan gila') value="klik">
+                <input type="submit" value="KIRIM" class="btn kirim">
+                <input type="reset" value="RESET" class="btn reset"></td>
             </tr>    
         </form>
     </table>     

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINIGAME</title>
+</head>
+<body >
+    <center>
+
+    
+    <h1>Suit</h1>
+    <table>
+        <tr>
+            <td>
+                <h2>YOU : <p id="skor_user">0</p></h2>
+                <button onclick="main('batu')">BATU</button>
+                <button onclick="main('gunting')">GUNTING</button>
+                <button onclick="main('kertas')">KERTAS</button>
+                <img id="pil_user" src="img/Batu.png" width="100px">
+            </td>
+            <td>
+                <h2>COM : <p id="skor_com">0</p></h2><br>
+                <img id="pil_com" src="img/Batu.png" width="100px">
+                <button id="com">RANDOM</button>
+            </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">
+                <p id="hasil">HASIL</p>
+            </td>
+
+        </tr>
+        
+    </table>
+
+    </center>
+    <script src="suitscript.js"></script>
+    
+
+</body>
+</html>

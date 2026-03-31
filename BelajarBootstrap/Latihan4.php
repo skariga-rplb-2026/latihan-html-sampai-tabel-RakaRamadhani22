@@ -25,7 +25,7 @@
     $garis = "======================================";
     echo  "<p>";
     echo $garis."<br>";
-    echo $komentar. "Di lab". $nama. "<br>Belajar  dengan giat ya. <br>";
+    echo $komentar. "Di Lab ". $nama. "<br>Belajar  dengan giat ya. <br>";
     echo $garis."<br>";
     ?>
 </body>

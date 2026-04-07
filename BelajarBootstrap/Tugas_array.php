@@ -4,10 +4,9 @@
         ["nama" => "Iwan", "kursus" => "HTML", "bayar" => "1000000"],
         ["nama" => "Zharif", "kursus" => "PHP", "bayar" => "1000000"],
         ["nama" => "Asep", "kursus" => "HTML", "bayar" => "1000000"],
-        ["nama" => "Siti", "kursus" => "HTML", "bayar" => "1000000"],
+        ["nama" => "Agus", "kursus" => "HTML", "bayar" => "1000000"],
     ];
 
-    
 ?>    
 
 <!DOCTYPE html>
@@ -20,11 +19,21 @@
 </head>
 <body>
     Pilih Kursus :
-    <select name="" id="">
-        <option value="HTML">HTML</option>
-        <option value="MySql">MySql</option>
-        <option value="PHP">PHP</option>
-    </select>
+    <form action="" method="GET">
+        <?php
+            if (isset($_GET['kursus'])){
+                $filter = $_GET['kursus'];
+            }else{
+                $filter = "semua";
+            }
+        ?>    
+        <select name="kursus" id="" onchange="this.form.submit()">
+            <option value="" <?php echo ($filter=="semua" || $filter=="")? "selected" : ""; ?> >All </option>
+            <option value="HTML" <?php echo ($filter=="HTML")? "selected" : ""; ?> >HTML</option>
+            <option value="MySql"<?php echo ($filter=="MySql")? "selected" : ""; ?> >MySql</option>
+            <option value="PHP" <?php echo ($filter=="PHP")? "selected" : ""; ?> >PHP</option>
+        </select>
+    </form>
     <table width="400" border="1">
         <tr>
             <th>Nama</th>
@@ -32,7 +41,23 @@
             <th>Bayar</th>
         </tr>
         <?php
-            foreach($data as $d){
+
+            $datatampil = [];
+            if(isset($_GET['kursus'])){
+                $filter = $_GET['kursus'];
+                if($filter == ""){
+                    $datatampil= $data;
+                }else{
+                    foreach($data as $d){
+                        if($d["kursus"] == $filter){
+                            $datatampil[] = $d;
+                        }
+                    }
+                }
+            }else{
+                $datatampil= $data;
+            }
+            foreach($datatampil as $d){
                 echo "<tr>";
                 echo "<td>".$d["nama"]."</td>";
                 echo "<td>".$d["kursus"]."</td>";

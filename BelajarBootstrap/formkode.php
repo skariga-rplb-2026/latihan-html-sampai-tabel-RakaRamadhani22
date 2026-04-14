@@ -1,6 +1,3 @@
-Berikut salinan kode dari gambar tersebut:
-
-```html
 <form action="#" method="post">
 <fieldset><legend>Kode Barang</legend>
     Kode Depan (jenis) <br/>
@@ -35,4 +32,3 @@ if($banyak_array == 3){
     echo "Kode Barang : $set_kode";
 }
 ?>
-```
